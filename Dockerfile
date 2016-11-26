@@ -37,6 +37,7 @@ RUN \
 	g++ \
 	gcc \
 	git \
+	fftw-dev \
 	jpeg-dev \
 	libpng-dev \
 	make \
@@ -66,9 +67,15 @@ RUN \
  make && \
  make install && \
 
+# upgrade installer
+# TODO: virtualenv?
+ pip install --no-cache-dir -U \
+	pip \
+	setuptools && \
+
 # install pip packages
  pip install --no-cache-dir -U \
-	beets \
+	git+git://github.com/WyseNynja/beets.git@reverse_proxy_support#egg=beets[web] \
 	flask \
 	pillow \
 	pip \
