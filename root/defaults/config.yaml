@@ -5,7 +5,6 @@ art_filename: albumart
 threaded: yes
 original_date: no
 per_disc_numbering: no
-reverse_proxy: true
 
 convert:
     auto: no
@@ -61,3 +60,4 @@ replace:
 web:
     host: 0.0.0.0
     port: 8337
+    reverse_proxy: yes
